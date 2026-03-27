@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import "./Register.css";
+import "./register.css";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -82,7 +82,7 @@ const Register = () => {
         </button>
 
         <p className="login-link">
-          Already have an account? <span onClick={() => navigate("/login")}>Login</span>
+          Already have an account? <span onClick={() => navigate("/login")}>Sign In</span>
         </p>
       </form>
     </div>
