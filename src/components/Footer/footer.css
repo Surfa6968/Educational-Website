@@ -1,0 +1,91 @@
+.footer {
+  background: #000;
+  padding: 16px 0 12px;        /* reduce top/bottom padding */
+}
+
+/* Columns title spacing */
+.footer h6 {
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+/* Link list */
+.link_list {
+  margin-top: 2px;
+}
+
+.link_list .link_item {
+  background: transparent;
+  padding: 2px 0;             /* tighter between links */
+}
+
+.link_list a {
+  text-decoration: none;
+  color: grey;
+  font-weight: 400;
+  font-size: 0.9rem;
+}
+
+.link_list a:hover {
+  color: #ce03f0;
+}
+
+/* University block text */
+.footer-university p {
+  margin-bottom: 3px;
+  font-size: 0.86rem;
+}
+
+/* Logo area */
+.logo {
+  padding: 6px 0 4px;         /* less space around logo */
+}
+
+.logo img {
+  width: 60px;                /* slightly smaller */
+  height: 60px;
+}
+
+/* Bottom text + socials */
+.follows {
+  margin-top: 4px;
+}
+
+.follows p {
+  margin-bottom: 2px;
+  font-size: 0.86rem;
+}
+
+.follows span a {
+  text-decoration: none;
+}
+
+.follows span {
+  margin-left: 10px;
+}
+
+/* Social icons row */
+.links_socials {
+  gap: 6px;
+  margin-top: 2px;
+}
+
+.links_socials a:hover {
+  color: #ce03f0;
+}
+
+/* Mobile tweaks */
+@media only screen and (max-width: 991px) {
+  .footer {
+    padding: 10px 0;
+  }
+
+  .logo img {
+    width: 52px;
+    height: 52px;
+  }
+
+  .footer h6 {
+    margin-top: 4px;
+  }
+}
