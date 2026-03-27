@@ -7,7 +7,6 @@ import logo from "../../assets/images/logo.png";
 const navigation = [
   { name: "Home", href: "/" },
   { name: "Courses", href: "/courses" },
-  { name: "ICT Department", href: "/department-ict" },
   { name: "About", href: "/about" },
   { name: "Contact", href: "/contact" },
 ];
