@@ -61,22 +61,24 @@ const HeroSection = () => {
                 />
               </motion.div> */}
 
-              {/* Primary CTA buttons */}
-              <motion.div
-                className="hero_cta_buttons"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: false, amount: 0.4 }}
-                transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
-              >
-                <Link to="/login">
-                  <button className="btn-search me-3">GET STARTED</button>
-                </Link>
-                <Link to="/courses">
-                  <button className="btn-secondary-hero">EXPLORE COURSES</button>
-                </Link>
+               {/* Primary CTA buttons */}
+                     <motion.div
+                            className="hero_cta_buttons"
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: false, amount: 0.4 }}
+                            transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
+                            >
+                            {/* Navigate to AuthChoice page */}
+                            <Link to="/register">
+                            <button className="btn-search me-3">GET STARTED</button>
+                            </Link>
+
+                            <Link to="/courses">
+                            <button className="btn-secondary-hero">EXPLORE COURSES</button>
+                            </Link>
+                     </motion.div>
               </motion.div>
-            </motion.div>
           </Col>
 
           {/* Right side: hero image */}
