@@ -6,6 +6,7 @@ import Footer from "./components/Footer/Footer";
 import Login from "./components/Login/Login";
 import Register from "./components/Register/Register";
 import AuthChoice from "./components/AuthChoice/AuthChoice"
+import Courses from "./components/Courses/Courses";
 
 
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           {/* <Route path="/auth-choice" element={<AuthChoice />} /> */}
+          <Route path="/courses" element={<Courses />} />
         </Route>
       </Routes>
     </>

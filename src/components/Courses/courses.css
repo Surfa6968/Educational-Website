@@ -1,0 +1,370 @@
+/* ===========================
+   Courses Section Background
+   =========================== */
+.courses-section {
+  padding: 3.5rem 0 4rem;
+  background: radial-gradient(circle at top left, #f5f3ff 0, #ffffff 50%, #f9fafb 100%);
+  position: relative;
+}
+
+.courses-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(125, 90, 255, 0.16) 0, transparent 45%),
+    radial-gradient(circle at 80% 0%, rgba(236, 72, 153, 0.13) 0, transparent 55%);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+/* ===========================
+   Header / Hero
+   =========================== */
+.courses_header {
+  padding: 0 12px;
+  margin-bottom: 2.4rem;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+
+  /* entrance animation for the whole header block */
+  opacity: 0;
+  transform: translateY(18px) scale(0.98);
+  animation: headerEntrance 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.1s forwards;
+}
+
+/* header card with background image */
+.courses_header_inner {
+  display: inline-block;
+  padding: 1.8rem 2.6rem;
+  border-radius: 22px;
+
+  /* background image + light overlay */
+  background-image:
+    linear-gradient(
+      to bottom right,
+      rgba(255, 255, 255, 0.94),
+      rgba(249, 250, 251, 0.94)
+    ),
+    url("/images/courses-hero-bg.png"); /* <-- change path to your image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  box-shadow:
+    0 22px 60px rgba(15, 23, 42, 0.18),
+    0 0 0 1px rgba(148, 163, 184, 0.28);
+  border: 1px solid rgba(148, 163, 184, 0.45);
+  backdrop-filter: blur(10px);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Heading text (no animation) */
+.courses_header h2 {
+  position: relative;
+  font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 3.2rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.6rem;
+
+  background: linear-gradient(
+    90deg,
+    #2e073f,
+    #7a1cac,
+    #ad49e1
+  );
+  background-size: 100% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+  opacity: 0;
+  transform: translateY(10px);
+  animation: headerTitleIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) 0.15s forwards;
+}
+
+/* optional small label above heading */
+.courses_header_kicker {
+  font-size: 0.55em;
+  text-transform: uppercase;
+  letter-spacing: 0.24em;
+  display: block;
+  margin-bottom: 0.25rem;
+  opacity: 0.9;
+}
+
+/* Paragraph text */
+.courses_header p {
+  max-width: 700px;
+  margin: 0.75rem auto 0;
+  color: #4b5563;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.6;
+  animation: fadeUp 0.6s ease-out 0.25s both;
+}
+
+/* ===========================
+   Filters Row
+   =========================== */
+.courses_filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 20px 1.6rem;
+  border-radius: 16px;
+  background-color: #f9f5ff;
+  margin-bottom: 2.4rem;
+  border: 1px solid rgba(190, 148, 255, 0.3);
+  box-shadow: 0 12px 30px rgba(148, 163, 184, 0.35);
+  position: relative;
+  z-index: 1;
+}
+
+.filter_group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.filter_group label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #4b5563;
+}
+
+.filter_group select,
+.filter_group input {
+  min-width: 160px;
+  padding: 6px 11px;
+  border-radius: 999px;
+  border: 1px solid #d1d5db;
+  font-size: 0.9rem;
+  background-color: #ffffff;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.filter_group select:focus,
+.filter_group input:focus {
+  outline: none;
+  border-color: #7a1cac;
+  box-shadow: 0 0 0 3px rgba(122, 28, 172, 0.18);
+}
+
+.filter_search {
+  flex: 1;
+  min-width: 220px;
+}
+
+/* search input wrapper with icon */
+.search_input_wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search_input_wrapper input {
+  width: 100%;
+  padding-left: 2.25rem;   /* space for the icon */
+}
+
+/* search icon inside input */
+.search_icon {
+  position: absolute;
+  left: 10px;
+  width: 16px;
+  height: 16px;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* ===========================
+   Course Card
+   =========================== */
+.single_course_item {
+  position: relative;
+  padding: 18px 18px 20px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  margin-bottom: 22px;
+  background-color: #ffffff;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+  border: 1px solid rgba(148, 163, 184, 0.4);
+  overflow: hidden;
+}
+
+.single_course_item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(135deg, rgba(46, 7, 63, 0.12), rgba(173, 73, 225, 0.08));
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+}
+
+.single_course_item:hover::before {
+  opacity: 1;
+}
+
+.single_course_item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(129, 140, 248, 0.4);
+  border-color: rgba(122, 28, 172, 0.9);
+}
+
+/* header row inside card (if used) */
+.course_header_row {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 0.25rem;
+}
+
+.course_icon_square {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #2e073f, #7a1cac, #ad49e1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.course_details {
+  margin: 0;
+}
+
+.course_code {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 0.25rem;
+}
+
+.course_title {
+  line-height: 1.35;
+  font-size: 1.12rem;
+  font-weight: 700;
+  color: #111827;
+}
+
+.course_meta {
+  font-size: 0.85rem;
+  color: #4b5563;
+  margin: 0.35rem 0 0.9rem;
+}
+
+/* Badges for resources */
+.course_badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 0.9rem;
+}
+
+.badge_tag {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background-color: #eef2ff;
+  color: #4338ca;
+  font-weight: 500;
+  border: 1px solid rgba(129, 140, 248, 0.35);
+}
+
+/* View course button */
+.btn-view-course {
+  border: none;
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-size: 0.87rem;
+  font-weight: 600;
+  color: #ffffff;
+  background: linear-gradient(
+    111.6deg,
+    rgb(174, 68, 223) 27.3%,
+    rgb(246, 135, 135) 112.7%
+  );
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(147, 51, 234, 0.35);
+  transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+}
+
+.btn-view-course:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 30px rgba(147, 51, 234, 0.45);
+  filter: brightness(1.03);
+}
+
+/* No courses text */
+.no_courses_text {
+  padding-left: 20px;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+/* ===========================
+   Keyframes
+   =========================== */
+@keyframes headerEntrance {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes headerTitleIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* ===========================
+   Mobile Tweaks
+   =========================== */
+@media (max-width: 768px) {
+  .courses_header {
+    padding: 0 12px;
+  }
+
+  .courses_header_inner {
+    padding: 1.2rem 1.4rem;
+    border-radius: 16px;
+  }
+
+  .courses_header h2 {
+    font-size: 2.1rem;
+  }
+
+  .courses_filters {
+    padding: 0.75rem 12px 1.3rem;
+    box-shadow: 0 8px 22px rgba(148, 163, 184, 0.28);
+  }
+}
