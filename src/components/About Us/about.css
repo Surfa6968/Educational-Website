@@ -1,18 +1,34 @@
-/* Centered box for title + text */
-.about_box {
-  padding: 2rem 2.4rem;
-  border-radius: 22px;
-  background: #ffffff;
-  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.16);
-  border: 1px solid rgba(148, 163, 184, 0.4);
-  text-align: center;              /* center heading container */
+/* ===========================
+   Section wrapper
+   =========================== */
+.about_section {
+  padding: 3.5rem 0 4rem;
+  background: radial-gradient(circle at top left, #f5f3ff 0, #ffffff 55%, #f9fafb 100%);
 }
 
-/* Title (centered by box text-align) */
+/* ===========================
+   Kicker label
+   =========================== */
+/* .about_kicker {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  padding: 0.16rem 0.7rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: #6b21a8;
+  background-color: #f3e8ff;
+} */
+
+/* ===========================
+   Title
+   =========================== */
 .about_title {
   font-family: "Poppins", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
     sans-serif;
-  font-size: 2.4rem;
+  font-size: 3rem;
   font-weight: 800;
   letter-spacing: 0.02em;
   margin-bottom: 1rem;
@@ -22,22 +38,133 @@
   color: transparent;
 }
 
-/* Paragraphs: left + justify inside the box */
+/* ===========================
+   Body text
+   =========================== */
 .about_body {
   margin: 0 auto;
   max-width: 640px;
-  text-align: left;                /* left alignment */
+  text-align: left;
 }
 
 .about_body p {
-  font-size: 0.95rem;
+  font-size: 1rem;
   color: #4b5563;
   line-height: 1.7;
-  margin-bottom: 0.75rem;
-  text-align: justify;             /* justify text lines */
+  margin-bottom: 0.9rem;
+  text-align: justify;
 }
 
-/* Image on right (current JSX already does this) */
+/* ===========================
+   Highlights list
+   =========================== */
+.about_highlights {
+  margin-top: 0.6rem;
+  padding-left: 1.1rem;
+  color: #374151;
+  font-size: 1rem;
+}
+
+.about_highlights li {
+  margin-bottom: 0.35rem;
+}
+
+/* ===========================
+   Mission & Vision block
+   =========================== */
+.about_mv_block {
+  margin-top: 1.6rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.about_mv_item {
+  position: relative;
+  padding: 1.1rem 1.15rem 1.05rem;
+  border-radius: 16px;
+  background: radial-gradient(circle at top left, #fdf2ff 0, #ffffff 55%);
+  border: 1px solid rgba(168, 85, 247, 0.35);
+  box-shadow: 0 14px 32px rgba(15, 23, 42, 0.16);
+  overflow: hidden;
+}
+
+.about_mv_item::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at -10% 0, rgba(168, 85, 247, 0.18), transparent 55%);
+  opacity: 0.7;
+  pointer-events: none;
+}
+
+.about_mv_item h3 {
+  position: relative;
+  font-size: 1rem;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #6b21a8;
+}
+
+.about_mv_item p {
+  position: relative;
+  font-size: 1rem;
+  color: #4b5563;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* ===========================
+   Right image
+   =========================== */
 .about_img {
   padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.about_img_el {
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.35);
+  object-fit: cover;
+}
+
+/* ===========================
+   Simple fade-in helper
+   =========================== */
+.fade_in_left {
+  opacity: 0;
+  transform: translateX(-12px);
+  animation: fadeInLeft 0.6s ease-out 0.1s forwards;
+}
+
+@keyframes fadeInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* ===========================
+   Responsive tweaks
+   =========================== */
+@media (max-width: 768px) {
+  .about_section {
+    padding: 2.6rem 0 3rem;
+  }
+
+  .about_title {
+    font-size: 2.1rem;
+  }
+
+  .about_img {
+    padding: 0.5rem 0 0;
+  }
+
+  .about_mv_block {
+    grid-template-columns: 1fr;
+  }
 }
