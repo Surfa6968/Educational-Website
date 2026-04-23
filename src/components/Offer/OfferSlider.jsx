@@ -122,8 +122,8 @@ const container = {
 };
 
 const card = {
-  width: 260,
-  minHeight: 170,
+  width: 400,
+  minHeight: 200,
   borderRadius: "16px",
   padding: "16px 18px",
   color: "#0f172a",

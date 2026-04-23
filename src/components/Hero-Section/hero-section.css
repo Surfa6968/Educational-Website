@@ -37,7 +37,7 @@ section {
 }
 
 
-.search {
+/* .search {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -48,9 +48,9 @@ section {
     background-color: #fff;
 
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
+} */
 
-.search input {
+/* .search input {
     border: none;
     border-radius: 15px;
     background-color: #fff;
@@ -67,7 +67,7 @@ section {
     height: 20px;
     cursor: pointer;
     background-color: #fff;
-}
+} */
 
 .btn-search {
     color: #fff;

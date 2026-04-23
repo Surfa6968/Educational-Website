@@ -1,15 +1,13 @@
-/* Page background (match register page) */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   background: linear-gradient(135deg, #7b2ff7, #f107a3);
-  font-family: 'Poppins', sans-serif;
-  padding: o;
+  font-family: "Poppins", sans-serif;
+  padding: 0;
 }
 
-/* Form card (match register form) */
 .login-form {
   background: #ffffff;
   padding: 1.8rem;
@@ -52,8 +50,8 @@
   box-shadow: 0 0 8px rgba(123, 47, 247, 0.3);
 }
 
-/* LOGIN BUTTON (match register theme) */
-.login-btn{
+/* Buttons */
+.login-btn {
   width: 100%;
   padding: 1rem;
   margin-top: 10px;
@@ -68,7 +66,7 @@
   box-shadow: 0 8px 20px rgba(123, 47, 247, 0.3);
 }
 
-.home-btn{
+.home-btn {
   width: 100%;
   padding: 0.7rem;
   margin-top: 10px;
@@ -81,6 +79,7 @@
   cursor: pointer;
   transition: 0.3s ease;
 }
+
 .login-btn:hover,
 .home-btn:hover {
   transform: translateY(-4px);

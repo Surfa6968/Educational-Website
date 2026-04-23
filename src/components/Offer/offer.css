@@ -52,7 +52,7 @@
    Card (INCREASED SIZE)
 ========================= */
 .offer_card {
-  width: 620px;                 /* Increased width */
+  width: 100%;                 /* Increased width */
   min-height: 260px;            /* Increased height */
   border-radius: 22px;
   padding: 28px 30px;           /* More inner space */
@@ -83,7 +83,7 @@
 
 /* Icon */
 .offer_card_icon_wrapper {
-  width: 48px;                  /* Increased icon size */
+  width: 100%;                  /* Increased icon size */
   height: 48px;
   border-radius: 999px;
   background-color: rgba(255, 255, 255, 0.9);
@@ -113,7 +113,7 @@
    Slider Buttons
 ========================= */
 .offer_slider_btn {
-  width: 48px;                  /* Bigger arrows */
+  width: 100%;                  /* Bigger arrows */
   height: 48px;
   border-radius: 50%;
   border: none;

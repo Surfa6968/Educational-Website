@@ -9,6 +9,7 @@ import AuthChoice from "./components/AuthChoice/AuthChoice"
 import Courses from "./components/Courses/Courses";
 import AboutUs from "./components/About Us/AboutUs";
 import Contact from "./components/Contact/Contact";
+import SubscribeSuccess from "./components/Subscribe/SubscribeSuccess";
 
 
 
@@ -34,6 +35,7 @@ function App() {
           <Route path="/courses" element={<Courses />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/subscribe-success" element={<SubscribeSuccess />} />
         </Route>
       </Routes>
     </>
