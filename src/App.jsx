@@ -10,6 +10,7 @@ import Courses from "./components/Courses/Courses";
 import AboutUs from "./components/About Us/AboutUs";
 import Contact from "./components/Contact/Contact";
 import SubscribeSuccess from "./components/Subscribe/SubscribeSuccess";
+import CourseDetail from "./components/CourseDetails/CourseDetail";
 
 
 
@@ -36,6 +37,7 @@ function App() {
           <Route path="/about" element={<AboutUs />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/subscribe-success" element={<SubscribeSuccess />} />
+          <Route path="/courses/:courseId" element={<CourseDetail />} />
         </Route>
       </Routes>
     </>
