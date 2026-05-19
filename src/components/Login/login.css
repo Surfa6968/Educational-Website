@@ -1,95 +1,348 @@
+/* ===========================
+   GLOBAL RESET
+   =========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ===========================
+   LOGIN CONTAINER
+   =========================== */
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
-  background: linear-gradient(135deg, #7b2ff7, #f107a3);
+  min-height: calc(100vh - 70px); /* Subtract navbar height */
+  background: linear-gradient(135deg, #f1e7f1, #efe5ee);
   font-family: "Poppins", sans-serif;
-  padding: 0;
+  padding: 2rem 1rem;
 }
 
+/* ===========================
+   LOGIN FORM
+   =========================== */
 .login-form {
   background: #ffffff;
-  padding: 1.8rem;
-  border-radius: 12px;
-  width: 350px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  padding: 2.5rem 2rem;
+  border-radius: 16px;
+  width: 100%;
+  max-width: 420px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  animation: slideIn 0.5s ease-out;
 }
 
-/* Title */
+/* Slide-in animation */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.login-form:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+/* ===========================
+   FORM TITLE
+   =========================== */
 .login-form h2 {
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-top: 0;
+  margin-bottom: 1.8rem;
   color: #333;
+  font-size: 1.8rem;
+  font-weight: 700;
 }
 
-/* Form groups */
+/* ===========================
+   FORM GROUPS
+   =========================== */
 .form-group {
-  margin-bottom: 1rem;
+  margin-bottom: 1.3rem;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.6rem;
   font-weight: 500;
+  color: #555;
+  font-size: 0.95rem;
 }
 
 .form-group input {
   width: 100%;
-  padding: 0.7rem 0.9rem;
-  border: 1px solid #ddd;
+  padding: 0.85rem 1rem;
+  border: 2px solid #e0e0e0;
   border-radius: 10px;
-  font-size: 0.95rem;
+  font-size: 1rem;
   outline: none;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  background: #f9f9f9;
+  font-family: "Poppins", sans-serif;
 }
 
-/* Input focus */
+/* Input focus state */
 .form-group input:focus {
   border-color: #7b2ff7;
-  box-shadow: 0 0 8px rgba(123, 47, 247, 0.3);
+  background: #ffffff;
+  box-shadow: 0 0 12px rgba(123, 47, 247, 0.2);
 }
 
-/* Buttons */
+.form-group input::placeholder {
+  color: #aaa;
+}
+
+/* ===========================
+   BUTTONS
+   =========================== */
 .login-btn {
   width: 100%;
   padding: 1rem;
-  margin-top: 10px;
+  margin-top: 0.8rem;
   background: linear-gradient(135deg, #7b2ff7, #f107a3);
   border: none;
   border-radius: 12px;
   color: #fff;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
   box-shadow: 0 8px 20px rgba(123, 47, 247, 0.3);
+  font-family: "Poppins", sans-serif;
+}
+
+.login-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(241, 7, 163, 0.4);
+}
+
+.login-btn:active {
+  transform: translateY(-1px);
 }
 
 .home-btn {
   width: 100%;
-  padding: 0.7rem;
-  margin-top: 10px;
+  display: block;
+  padding: 0.9rem;
+  margin-top: 0.8rem;
   background: transparent;
   border: 2px solid #6c63ff;
   border-radius: 12px;
   color: #6c63ff;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
+  text-align: center;
+  text-decoration: none;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
+  font-family: "Poppins", sans-serif;
 }
 
-.login-btn:hover,
 .home-btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 25px rgba(241, 7, 163, 0.35);
+  background: #6c63ff;
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(108, 99, 255, 0.3);
 }
 
-/* Error message */
+.home-btn:active {
+  transform: translateY(-1px);
+}
+
+/* ===========================
+   ERROR MESSAGE
+   =========================== */
 .error {
   color: #ff3b3b;
+  background: #ffe6e6;
+  padding: 0.7rem;
+  border-radius: 8px;
   text-align: center;
   margin-bottom: 1rem;
   font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid #ffcccc;
+  animation: shake 0.3s ease;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+/* ===========================
+   RESPONSIVE DESIGN
+   =========================== */
+
+/* Tablets (portrait) */
+@media (max-width: 768px) {
+  .login-container {
+    padding: 1.5rem 1rem;
+    min-height: calc(100vh - 60px);
+  }
+
+  .login-form {
+    padding: 2rem 1.5rem;
+    max-width: 380px;
+  }
+
+  .login-form h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .form-group input {
+    padding: 0.8rem 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  .login-btn,
+  .home-btn {
+    padding: 0.85rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Mobile devices */
+@media (max-width: 480px) {
+  .login-container {
+    padding: 1rem;
+    min-height: calc(100vh - 60px);
+  }
+
+  .login-form {
+    padding: 1.8rem 1.2rem;
+    max-width: 100%;
+    border-radius: 12px;
+  }
+
+  .login-form h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.3rem;
+  }
+
+  .form-group {
+    margin-bottom: 1.1rem;
+  }
+
+  .form-group label {
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .form-group input {
+    padding: 0.75rem 0.85rem;
+    font-size: 0.9rem;
+  }
+
+  .login-btn,
+  .home-btn {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .error {
+    font-size: 0.85rem;
+    padding: 0.6rem;
+  }
+}
+
+/* Very small devices */
+@media (max-width: 360px) {
+  .login-form {
+    padding: 1.5rem 1rem;
+  }
+
+  .login-form h2 {
+    font-size: 1.3rem;
+  }
+
+  .form-group input {
+    font-size: 0.85rem;
+  }
+
+  .login-btn,
+  .home-btn {
+    font-size: 0.85rem;
+  }
+}
+
+/* Landscape mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .login-container {
+    padding: 1rem;
+    min-height: 100vh;
+  }
+
+  .login-form {
+    padding: 1.5rem 1.2rem;
+    max-width: 450px;
+  }
+
+  .login-form h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .form-group {
+    margin-bottom: 0.9rem;
+  }
+
+  .login-btn,
+  .home-btn {
+    padding: 0.7rem;
+  }
+}
+
+/* ===========================
+   ACCESSIBILITY
+   =========================== */
+.login-btn:focus,
+.home-btn:focus,
+.form-group input:focus {
+  outline: 2px solid #7b2ff7;
+  outline-offset: 2px;
+}
+
+/* ===========================
+   LOADING STATE (OPTIONAL)
+   =========================== */
+.login-btn:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.login-btn.loading {
+  position: relative;
+  color: transparent;
+}
+
+.login-btn.loading::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  border-top-color: transparent;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
 }

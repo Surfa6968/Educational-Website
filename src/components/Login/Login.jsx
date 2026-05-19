@@ -10,17 +10,14 @@ const Login = () => {
   const handleLogin = (e) => {
     e.preventDefault();
 
-    // Simple validation
     if (!email || !password) {
       setError("Please fill in all fields");
       return;
     }
 
-    // Example: check credentials (replace with backend API)
     if (email === "student@example.com" && password === "123456") {
       setError("");
       alert("Login successful!");
-      // Redirect to dashboard or another page
     } else {
       setError("Invalid email or password");
     }
@@ -30,7 +27,9 @@ const Login = () => {
     <div className="login-container">
       <form className="login-form" onSubmit={handleLogin}>
         <h2>Student Login</h2>
+
         {error && <p className="error">{error}</p>}
+
         <div className="form-group">
           <label>Email</label>
           <input
@@ -55,9 +54,9 @@ const Login = () => {
           Sign In
         </button>
 
-       <Link to="/">
-              <button type="button" className="home-btn"> Back to Home </button>
-       </Link>
+        <Link to="/" className="home-btn">
+          Back to Home
+        </Link>
       </form>
     </div>
   );

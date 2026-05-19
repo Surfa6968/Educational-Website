@@ -3,7 +3,7 @@
    =========================== */
 .about_section {
   padding: 3.5rem 0 4rem;
-  background: radial-gradient(circle at top left, #f5f3ff 0, #ffffff 55%, #f9fafb 100%);
+  background: linear-gradient(180deg, #f1e7f1 0%, #efe5ee 100%);
 }
 
 /* ===========================

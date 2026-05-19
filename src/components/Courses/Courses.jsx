@@ -28,9 +28,9 @@ const allCourses = [
     semester: 1,
     department: "ICT",
     hasNotes: true,
-    hasPapers: true,
+    hasPapers: false,
     hasQuizzes: true,
-    hasProgress: false,
+    hasProgress: true,
   },
   {
     id: "ICT11014",
@@ -47,27 +47,27 @@ const allCourses = [
   {
     id: "ITM11011",
     code: "ITM 11011",
-    title: "Discrete Mathematics",
+    title: "Mathematics for ICT",
     year: 1,
     semester: 1,
     department: "ICT",
-    hasNotes: true,
+    hasNotes: false,
     hasPapers: true,
     hasQuizzes: true,
-    hasProgress: false,
+    hasProgress: true,
   },
 
   {
     id: "ICT12023",
     code: "ICT 12023",
-    title: "Object Oriented Programming (Java)",
+    title: "Object Oriented Programming",
     year: 1,
     semester: 2,
     department: "ICT",
     hasNotes: true,
     hasPapers: true,
     hasQuizzes: true,
-    hasProgress: false,
+    hasProgress: true,
   },
   {
     id: "ICT12021",
@@ -78,8 +78,8 @@ const allCourses = [
     department: "ICT",
     hasNotes: true,
     hasPapers: true,
-    hasQuizzes: true,
-    hasProgress: false,
+    hasQuizzes: false,
+    hasProgress: true,
   },
   {
     id: "ICT12024",
@@ -90,7 +90,7 @@ const allCourses = [
     department: "ICT",
     hasNotes: true,
     hasPapers: true,
-    hasQuizzes: false,
+    hasQuizzes: true,
     hasProgress: false,
   },
   {
@@ -102,8 +102,8 @@ const allCourses = [
     department: "ICT",
     hasNotes: true,
     hasPapers: true,
-    hasQuizzes: false,
-    hasProgress: false,
+    hasQuizzes: true,
+    hasProgress: true,
   },
 
   {
@@ -153,7 +153,7 @@ const allCourses = [
     hasNotes: true,
     hasPapers: true,
     hasQuizzes: true,
-    hasProgress: false,
+    hasProgress: true,
   },
 
   {
@@ -191,7 +191,7 @@ const allCourses = [
     hasNotes: true,
     hasPapers: true,
     hasQuizzes: true,
-    hasProgress: false,
+    hasProgress: true,
   },
   {
     id: "ICT42053",
@@ -203,7 +203,7 @@ const allCourses = [
     hasNotes: true,
     hasPapers: true,
     hasQuizzes: true,
-    hasProgress: false,
+    hasProgress: true,
   },
 ];
 
